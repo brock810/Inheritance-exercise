@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.Design;
 
 namespace Inheritance
 {
@@ -34,6 +35,37 @@ namespace Inheritance
              *  
              * Creatively display the class member values 
              */
+
+            var myBird = new Bird();
+            myBird.Flies = true;
+            myBird.FeatherColor = "Black";
+            myBird.NoseBeak = true;
+            myBird.NumberOfLegs = 4;
+            Console.WriteLine($"Wow! they have all {myBird.NumberOfLegs} legs I didn't know that. With {myBird.FeatherColor} wings?");
+            if (myBird.Flies)
+            {
+                Console.WriteLine($"FLY! fly!!");
+            }
+            else
+            {
+                Console.WriteLine($"dead");
+            }
+            var myReptile = new Reptile();
+            myReptile.NeedsFood = false;
+            myReptile.Lives = "Dessert";
+            myReptile.IsSlimy = true;
+            myReptile.FavDrink = "water";
+            Console.WriteLine($"So these reptiles live in the {myReptile.Lives}? Do they drink a lot of {myReptile.FavDrink}");
+            if(myReptile.NeedsFood)
+            {
+                Console.WriteLine($"I am so hungry");
+            }
+            else
+            {
+                Console.WriteLine($"I am so full");
+            }
+        
+        
         }
     }
 }
